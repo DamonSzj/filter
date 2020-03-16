@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+         version="4.0">
+    <context-param>
+        <param-name>encoding</param-name>
+        <param-value>UTF-8</param-value>
+    </context-param>
+    <!--<servlet>-->
+    <!--<servlet-name>authorityServlet</servlet-name>-->
+    <!--<servlet-class>com.atguigu.javaweb.AuthorityServlet</servlet-class>-->
+    <!--</servlet>-->
+    <!--<servlet-mapping>-->
+    <!--<servlet-name>authorityServlet</servlet-name>-->
+    <!--<url-pattern>/authorityServlet</url-pattern>-->
+    <!--</servlet-mapping>-->
+
+    <!--<servlet>-->
+    <!--<servlet-name>loginServlet</servlet-name>-->
+    <!--<servlet-class>com.atguigu.javaweb.LoginServlet</servlet-class>-->
+    <!--</servlet>-->
+    <!--<servlet-mapping>-->
+    <!--<servlet-name>loginServlet</servlet-name>-->
+    <!--<url-pattern>/loginServlet</url-pattern>-->
+    <!--</servlet-mapping>-->
+
+    <!--<filter>-->
+    <!--<filter-name>authoritityFilter</filter-name>-->
+    <!--<filter-class>com.atguigu.filter.AuthoritityFilter</filter-class>-->
+    <!--</filter>-->
+    <!--<filter-mapping>-->
+    <!--<filter-name>authoritityFilter</filter-name>-->
+    <!--<url-pattern>*.jsp</url-pattern>-->
+    <!--</filter-mapping>-->
+
+    <!--<filter>-->
+    <!--<filter-name>contextFilter</filter-name>-->
+    <!--<filter-class>com.atguigu.filter.ContextFilter</filter-class>-->
+    <!--</filter>-->
+    <!--<filter-mapping>-->
+    <!--<filter-name>contextFilter</filter-name>-->
+    <!--<url-pattern>/bbs.jsp</url-pattern>-->
+    <!--</filter-mapping>-->
+
+    <!--<filter>-->
+    <!--<filter-name>userNameFilter</filter-name>-->
+    <!--<filter-class>com.atguigu.filter.UserNameFilter</filter-class>-->
+    <!--<init-param>-->
+    <!--<param-name>username</param-name>-->
+    <!--<param-value>tom</param-value>-->
+    <!--</init-param>-->
+    <!--</filter>-->
+
+    <!--<filter-mapping>-->
+    <!--<filter-name>userNameFilter</filter-name>-->
+    <!--<url-pattern>/filter/hello.jsp</url-pattern>-->
+    <!--</filter-mapping>-->
+
+    <!--<filter>-->
+    <!--<filter-name>passwordFilter</filter-name>-->
+    <!--<filter-class>com.atguigu.filter.PasswordFilter</filter-class>-->
+    <!--<init-param>-->
+    <!--<param-name>password</param-name>-->
+    <!--<param-value>1234</param-value>-->
+    <!--</init-param>-->
+    <!--</filter>-->
+    <!--<filter-mapping>-->
+    <!--<filter-name>passwordFilter</filter-name>-->
+    <!--<url-pattern>/filter/hello.jsp</url-pattern>-->
+    <!--</filter-mapping>-->
+
+    <!--<filter>-->
+    <!--<filter-name>noCacheFilter</filter-name>-->
+    <!--<filter-class>com.atguigu.cache.NoCacheFilter</filter-class>-->
+    <!--</filter>-->
+    <!--<filter-mapping>-->
+    <!--<filter-name>noCacheFilter</filter-name>-->
+    <!--<url-pattern>/cache/*</url-pattern>-->
+    <!--</filter-mapping>-->
+
+    <!--设置自定义编码过滤器-->
+    <filter>
+        <filter-name>encodingCharsetFilter</filter-name>
+        <filter-class>com.atguigu.encoding.EncodingCharsetFilter</filter-class>
+    </filter>
+
+    <filter-mapping>
+        <filter-name>encodingCharsetFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+        <!--<dispatcher>FORWARD</dispatcher>-->
+        <!--<dispatcher>INCLUDE</dispatcher>-->
+        <!--<dispatcher>ERROR</dispatcher>-->
+        <!--<dispatcher>REQUEST</dispatcher>-->
+    </filter-mapping>
+</web-app>
